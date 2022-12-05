@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="RLTSquare\Ccq\Api\Data\CustomDataInterface"
+                type="RLTSquare\Ccq\Model\Queue\CustomData"/>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="CustomCommand" xsi:type="object">RLTSquare\Ccq\Console\CustomCommand</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
+
